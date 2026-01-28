@@ -91,39 +91,65 @@ function App() {
               <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-navy/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-lightest-slate lg:sr-only">Experience</h2>
               </div>
-              <ol className="group/list">
-                <JobCard 
-                  date="2024 — Present"
-                  title="Senior Frontend Engineer"
-                  company="Tech Corp"
-                  description="Build and maintain critical components used to construct the frontend across the whole product."
-                  skills={["React", "Tailwind", "TypeScript"]}
-                />
-                <JobCard 
-                  date="2021 — 2024"
-                  title="Frontend Developer"
-                  company="Creative Agency"
-                  description="Developed and styled interactive web apps for Apple Music, including the UI for their annual music recap experience."
-                  skills={["Vue", "SCSS", "JavaScript"]}
-                />
-              </ol>
+                <ol className="group/list">
+                  {/* Job 1: ALSPEC (Current) */}
+                  <JobCard 
+                    date="Feb 2025 — Present"
+                    title="Database Developer"
+                    company="Alspec"
+                    description="Optimizing the Soft Tech V6 quoting software by implementing complex SQL queries and VB.NET macros. Managing DevOps for MSSQL databases, including automated backups and code reviews."
+                    skills={["SQL", "VB.NET", "MSSQL", "DevOps"]}
+                  />
+
+                  {/* Job 2: Anzir (Internship) */}
+                  <JobCard 
+                    date="Dec 2024 — Mar 2025"
+                    title="Software Engineer Intern"
+                    company="Anzir"
+                    description="Refactored the mobile app's localization module using Flutter, enabling real-time translation updates for global users. Streamlined the translation management workflow for the O&M team."
+                    skills={["Flutter", "Dart", "Mobile Dev"]}
+                  />
+
+                  {/* Job 3: Outlier.ai (AI Experience) */}
+                  <JobCard 
+                    date="Nov 2024 — Present"
+                    title="AI Training Data Annotator"
+                    company="Outlier.ai"
+                    description="Auditing Python-based AI outputs to refine Reinforcement Learning (RLHF) pipelines. Engineering high-fidelity multimodal training datasets to improve model alignment and logic."
+                    skills={["Python", "RLHF", "Generative AI"]}
+                  />
+
+                  {/* Job 4: Huawei (Big Tech Experience) */}
+                  <JobCard 
+                    date="Feb 2022 — Jun 2022"
+                    title="Software Development Engineer"
+                    company="Huawei Technologies"
+                    description="Developed embedded C code for AITO electric vehicles (M5/M7 models), enabling critical communication between SoC and MCU chips. Built Python automation scripts for smoke testing."
+                    skills={["C", "Python", "Embedded Systems", "Automotive"]}
+                  />
+                </ol>
             </section>
 
             {/* PROJECTS SECTION */}
             <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-               <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-navy/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-navy/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-lightest-slate lg:sr-only">Projects</h2>
               </div>
               <ul className="group/list">
                 <ProjectCard 
-                  title="Spotify Profile Integration"
-                  desc="A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks."
-                  tech={["React", "Express", "Spotify API"]}
+                  title="ANU Neuroscience Seminar Platform"
+                  desc="A full-stack platform built for the ANU Institute of Neuroscience to aggregate and display seminar data. Features include a web crawler, elastic search, and a personalized email notification system based on user interests."
+                  tech={["Next.js", "FastAPI", "PostgreSQL", "NLP/SpaCy"]}
                 />
-                 <ProjectCard 
-                  title="Halcyon Theme"
-                  desc="A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace."
-                  tech={["VS Code", "JSON"]}
+                <ProjectCard 
+                  title="Android Car Trading App"
+                  desc="A native Android application for buying and selling used cars (similar to Carsales). Implemented secure user authentication, real-time car listing uploads, and a search engine powered by scraped real-world data."
+                  tech={["Java", "Android Studio", "SQLite", "Python"]}
+                />
+                <ProjectCard 
+                  title="Whist Poker Game Architecture"
+                  desc="Refactored a legacy Java game codebase using advanced design patterns (Factory, Strategy, Observer) to significantly improve maintainability. Extended the system by implementing AI-driven NPCs with distinct playing styles."
+                  tech={["Java", "Design Patterns", "UML", "OOP"]}
                 />
               </ul>
             </section>
@@ -131,7 +157,7 @@ function App() {
             {/* FOOTER */}
             <footer className="max-w-md pb-16 text-sm text-slate sm:pb-0">
               <p>
-                Loosely designed in <span className="text-white">Figma</span> and coded in <span className="text-white">Visual Studio Code</span> by yours truly. Built with <span className="text-white">React</span> and <span className="text-white">Tailwind CSS</span>, deployed with <span className="text-white">GitHub Pages</span>.
+                Loosely drafted in <span className="text-white">Figma</span> and coded in <span className="text-white">Visual Studio Code</span> by yours truly. Built with <span className="text-white">React</span> and <span className="text-white">Tailwind CSS</span>, deployed with <span className="text-white">GitHub Pages</span>.
               </p>
             </footer>
 
