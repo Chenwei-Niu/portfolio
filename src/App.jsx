@@ -30,13 +30,13 @@ function App() {
           <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
             <div>
               <h1 className="text-4xl font-bold tracking-tight text-lightest-slate sm:text-5xl">
-                <a href="/">Your Name</a>
+                <a href="/">Chenwei Niu</a>
               </h1>
               <h2 className="mt-3 text-lg font-medium tracking-tight text-lightest-slate sm:text-xl">
-                Senior Frontend Engineer
+                Full Stack Engineer
               </h2>
               <p className="mt-4 max-w-xs leading-normal text-slate">
-                I build pixel-perfect, accessible, and performant web experiences for the future.
+                I build aesthetic, professional, and performant software for the future.
               </p>
 
               {/* Navigation Links */}
@@ -59,12 +59,12 @@ function App() {
             {/* Social Links */}
             <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
               <li className="mr-5 text-xs">
-                <a className="block hover:text-green" href="https://github.com" target="_blank" rel="noreferrer">
+                <a className="block hover:text-green" href="https://github.com/Chenwei-Niu" target="_blank" rel="noreferrer">
                   GITHUB
                 </a>
               </li>
               <li className="mr-5 text-xs">
-                <a className="block hover:text-green" href="https://linkedin.com" target="_blank" rel="noreferrer">
+                <a className="block hover:text-green" href="https://www.linkedin.com/in/chenwei-niu-276b201b6/" target="_blank" rel="noreferrer">
                   LINKEDIN
                 </a>
               </li>
@@ -81,7 +81,7 @@ function App() {
               </div>
               <div>
                 <p className="mb-4 text-slate">
-                  Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding. Fast-forward to today, and I’ve had the privilege of building software for an <span className="text-green">advertising agency</span>, a <span className="text-green">start-up</span>, and a <span className="text-green">huge corporation</span>.
+                  From cracking admin privileges to bypass parental controls in 2013 to building enterprise software today, I’ve always been a tech enthusiast. My journey led to a Computer Science degree and a diverse portfolio, where I’ve developed applications for a<span className="text-green"> Chinese self-driving titan</span>, a <span className="text-green"> an agile startup</span>, and an <span className="text-green">Australian aluminium industrial corporate.</span>.
                 </p>
               </div>
             </section>
