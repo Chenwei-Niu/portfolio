@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import carsalesImg from './assets/carsales.jpg';
 import anuJohnImg from './assets/anu john.png';
+import whistImg from './assets/whist.png';
 
 function App() {
   // 1. The "Spotlight" Effect Logic
@@ -177,9 +178,10 @@ function App() {
                 />
                 <ProjectCard 
                   title="Whist Poker Game Architecture"
-                  desc="Refactored a legacy Java game codebase using advanced design patterns (Factory, Strategy, Observer) to significantly improve maintainability. Extended the system by implementing AI-driven NPCs with distinct playing styles."
-                  tech={["Java", "Design Patterns", "UML", "OOP"]}
-                  image="https://placehold.co/200x120"
+                  desc="Refactored a legacy Java game codebase using advanced design patterns to significantly improve maintainability. Extended the system by implementing AI-driven NPCs with distinct playing styles."
+                  tech={["Java", "Design Patterns", "Game Theory", "AI"]}
+                  link="https://github.com/Chenwei-Niu/SWEN30006-2020-S1"
+                  image={whistImg}
                 />
               </ul>
             </section>
