@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import carsalesImg from './assets/carsales.jpg';
+import anuJohnImg from './assets/anu john.png';
 
 function App() {
   // 1. The "Spotlight" Effect Logic
@@ -12,14 +14,18 @@ function App() {
     return () => window.removeEventListener('mousemove', updateMousePosition);
   }, []);
 
+  useEffect(() => {
+    document.title = "Chenwei Niu - A Tech Enthusiast to boost your business";
+  }, []);
+
   return (
-    <div className="min-h-screen font-sans selection:bg-green selection:text-navy">
+    <div className="min-h-screen font-sans selection:bg-green selection:text-navy bg-black">
       
       {/* Background Spotlight Gradient */}
       <div 
-        className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
+        className="pointer-events-none fixed inset-0 z-30 transition duration-300"
         style={{
-          background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(100, 255, 218, 0.15), transparent 80%)`
+          background: `radial-gradient(360px at ${mousePosition.x}px ${mousePosition.y}px, rgba(100, 255, 218, 0.15), transparent 80%)`
         }}
       />
 
@@ -68,6 +74,21 @@ function App() {
                   LINKEDIN
                 </a>
               </li>
+              <li className="mr-5 text-xs">
+                <a className="block hover:text-green" href="https://leetcode.com/" target="_blank" rel="noreferrer">
+                  LEETCODE
+                </a>
+              </li>
+              <li className="mr-5 text-xs">
+                <a className="block hover:text-green" href="mailto:your.email@example.com" target="_blank" rel="noreferrer">
+                  EMAIL
+                </a>
+              </li>
+              <li className="mr-5 text-xs">
+                <a className="block hover:text-green" href="mailto:your.email@example.com" target="_blank" rel="noreferrer">
+                  HIRE ME
+                </a>
+              </li>
             </ul>
           </header>
 
@@ -76,20 +97,20 @@ function App() {
             
             {/* ABOUT SECTION */}
             <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-navy/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                <h2 className="text-sm font-bold uppercase tracking-widest text-lightest-slate lg:sr-only">About</h2>
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-black/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
+                <h2 className="text-xl font-bold uppercase tracking-widest text-lightest-slate">About</h2>
               </div>
               <div>
                 <p className="mb-4 text-slate">
-                  From cracking admin privileges to bypass parental controls in 2013 to building enterprise software today, I’ve always been a tech enthusiast. My journey led to a Computer Science degree and a diverse portfolio, where I’ve developed applications for a<span className="text-green"> Chinese self-driving titan</span>, a <span className="text-green"> an agile startup</span>, and an <span className="text-green">Australian aluminium industrial corporate.</span>.
+                  From cracking admin privileges to bypass parental control of my family computer in 2013 to building enterprise software today, I’ve always been a tech enthusiast. My journey led to a Computer Science degree and a diverse portfolio, where I’ve developed applications for a<span className="text-green"> Chinese self-driving titan</span>, an <span className="text-green"> agile startup</span>, and an <span className="text-green">Australian aluminium industrial corporate</span>.
                 </p>
               </div>
             </section>
 
             {/* EXPERIENCE SECTION */}
             <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-navy/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                <h2 className="text-sm font-bold uppercase tracking-widest text-lightest-slate lg:sr-only">Experience</h2>
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-black/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
+                <h2 className="text-xl font-bold uppercase tracking-widest text-lightest-slate">Experience</h2>
               </div>
                 <ol className="group/list">
                   {/* Job 1: ALSPEC (Current) */}
@@ -99,6 +120,7 @@ function App() {
                     company="Alspec"
                     description="Optimizing the Soft Tech V6 quoting software by implementing complex SQL queries and VB.NET macros. Managing DevOps for MSSQL databases, including automated backups and code reviews."
                     skills={["SQL", "VB.NET", "MSSQL", "DevOps"]}
+                    link="https://alspec.com.au"
                   />
 
                   {/* Job 2: Anzir (Internship) */}
@@ -108,6 +130,7 @@ function App() {
                     company="Anzir"
                     description="Refactored the mobile app's localization module using Flutter, enabling real-time translation updates for global users. Streamlined the translation management workflow for the O&M team."
                     skills={["Flutter", "Dart", "Mobile Dev"]}
+                    link="https://www.anzirtech.com/"
                   />
 
                   {/* Job 3: Outlier.ai (AI Experience) */}
@@ -117,6 +140,7 @@ function App() {
                     company="Outlier.ai"
                     description="Auditing Python-based AI outputs to refine Reinforcement Learning (RLHF) pipelines. Engineering high-fidelity multimodal training datasets to improve model alignment and logic."
                     skills={["Python", "RLHF", "Generative AI"]}
+                    link="https://outlier.ai/"
                   />
 
                   {/* Job 4: Huawei (Big Tech Experience) */}
@@ -124,32 +148,38 @@ function App() {
                     date="Feb 2022 — Jun 2022"
                     title="Software Development Engineer"
                     company="Huawei Technologies"
-                    description="Developed embedded C code for AITO electric vehicles (M5/M7 models), enabling critical communication between SoC and MCU chips. Built Python automation scripts for smoke testing."
+                    description="Developed embedded C code for AITO electric vehicles (M5/M7/M9 models), enabling critical communication between SoC and MCU chips. Built Python automation scripts for smoke testing."
                     skills={["C", "Python", "Embedded Systems", "Automotive"]}
+                    link="https://www.huawei.com/au/"
                   />
                 </ol>
             </section>
 
             {/* PROJECTS SECTION */}
             <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-navy/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                <h2 className="text-sm font-bold uppercase tracking-widest text-lightest-slate lg:sr-only">Projects</h2>
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-black/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
+                <h2 className="text-xl font-bold uppercase tracking-widest text-lightest-slate">Projects</h2>
               </div>
               <ul className="group/list">
                 <ProjectCard 
                   title="ANU Neuroscience Seminar Platform"
                   desc="A full-stack platform built for the ANU Institute of Neuroscience to aggregate and display seminar data. Features include a web crawler, elastic search, and a personalized email notification system based on user interests."
                   tech={["Next.js", "FastAPI", "PostgreSQL", "NLP/SpaCy"]}
+                  link="https://github.com/Chenwei-Niu/John-Eccles-Institute-Project"
+                  image={anuJohnImg}
                 />
                 <ProjectCard 
                   title="Android Car Trading App"
                   desc="A native Android application for buying and selling used cars (similar to Carsales). Implemented secure user authentication, real-time car listing uploads, and a search engine powered by scraped real-world data."
                   tech={["Java", "Android Studio", "SQLite", "Python"]}
+                  link="https://github.com/Chenwei-Niu/COMP6442-Fake-Carsales"
+                  image={carsalesImg}
                 />
                 <ProjectCard 
                   title="Whist Poker Game Architecture"
                   desc="Refactored a legacy Java game codebase using advanced design patterns (Factory, Strategy, Observer) to significantly improve maintainability. Extended the system by implementing AI-driven NPCs with distinct playing styles."
                   tech={["Java", "Design Patterns", "UML", "OOP"]}
+                  image="https://placehold.co/200x120"
                 />
               </ul>
             </section>
@@ -172,17 +202,22 @@ function App() {
 // Sub-Components
 // ---------------------------------------------------------
 
-function JobCard({ date, title, company, description, skills }) {
+function JobCard({ date, title, company, description, skills, link }) {
   return (
     <li className="mb-12">
-      <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+      <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-40">
         <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2" aria-label={date}>{date}</header>
         <div className="z-10 sm:col-span-6">
           <h3 className="font-medium leading-tight text-lightest-slate group-hover:text-green focus-visible:text-green">
-            <div>
-              <span className="absolute -inset-x-4 -inset-y-4 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-light-navy/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></span>
-              <span>{title} · <span className="inline-block">{company}</span></span>
-            </div>
+            <a href={link} target="_blank" rel="noreferrer" className="inline-flex items-baseline font-medium leading-tight hover:text-green focus-visible:text-green group/link text-base">
+              {/* This span makes the whole card clickable */}
+              <span className="absolute -inset-x-4 -inset-y-4 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-light-navy/25 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></span>
+              <span>
+                {title} · <span className="inline-block">{company}</span>
+                {/* Arrow icon that only shows if a link exists */}
+                {link && <span className="inline-block transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 motion-reduce:transition-none ml-1">↗</span>}
+              </span>
+            </a>
           </h3>
           <p className="mt-2 text-sm leading-normal text-slate">{description}</p>
           <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
@@ -198,15 +233,22 @@ function JobCard({ date, title, company, description, skills }) {
   );
 }
 
-function ProjectCard({ title, desc, tech }) {
+function ProjectCard({ title, desc, tech, link, image }) {
   return (
     <li className="mb-12">
-      <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-        <div className="z-10 sm:col-span-8">
+      <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-40">
+        <div className="z-10 sm:col-span-2">
+          <img src={image} alt={title} className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30" />
+        </div>
+        <div className="z-10 sm:col-span-6">
           <h3 className="font-medium leading-tight text-lightest-slate group-hover:text-green focus-visible:text-green">
-            <a href="#" className="inline-flex items-baseline font-medium leading-tight hover:text-green focus-visible:text-green group/link text-base">
-              <span className="absolute -inset-x-4 -inset-y-4 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-light-navy/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></span>
-              <span className="inline-block">{title} <span className="inline-block transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 motion-reduce:transition-none ml-1">↗</span></span>
+            <a href={link} target="_blank" rel="noreferrer" className="inline-flex items-baseline font-medium leading-tight hover:text-green focus-visible:text-green group/link text-base">
+              <span className="absolute -inset-x-4 -inset-y-4 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-light-navy/25 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></span>
+              <span className="inline-block">
+                {title} 
+                {/* Arrow icon */}
+                <span className="inline-block transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 motion-reduce:transition-none ml-1">↗</span>
+              </span>
             </a>
           </h3>
           <p className="mt-2 text-sm leading-normal text-slate">{desc}</p>
