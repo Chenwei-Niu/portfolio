@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import carsalesImg from './assets/carsales.jpg';
 import anuJohnImg from './assets/anu john.png';
 import whistImg from './assets/whist.png';
+import githubGreenImg from './assets/github green.png';
 
 function App() {
   // 1. The "Spotlight" Effect Logic
@@ -162,6 +163,13 @@ function App() {
                 <h2 className="text-xl font-bold uppercase tracking-widest text-lightest-slate">Projects</h2>
               </div>
               <ul className="group/list">
+                <ProjectCard 
+                  title="GitHub Contribution Graph Generator"
+                  desc="A CLI automation tool that programmatically populates the GitHub contribution graph. Users can customize commit frequency and patterns to 'paint' their profile green, demonstrating proficiency with Git scripting and history manipulation."
+                  tech={["Docker", "Bash"]}
+                  link="https://github.com/Chenwei-Niu/makeYourGitHubGreen"
+                  image={githubGreenImg}
+                />
                 <ProjectCard 
                   title="ANU Neuroscience Seminar Platform"
                   desc="A full-stack platform built for the ANU Institute of Neuroscience to aggregate and display seminar data. Features include a web crawler, elastic search, and a personalized email notification system based on user interests."
